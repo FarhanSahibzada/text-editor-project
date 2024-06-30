@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 40%;
+            height: 50%;
+        
+
+            #action {
+                padding: 10px;
+                background-color: whitesmoke;
+                border-radius: 10px;
+
+
+                #size {
+                    background-color: whitesmoke;
+                    font-size: 18px;
+                    text-align: center;
+                    width: 60px;
+                    height: 30px;
+                    outline: none;
+                    border: none;
+                    margin-right: 10px;
+                }
+
+                .tt {
+                    border-left: 2px solid rgba(53, 54, 65, 0.986) !important;
+                    width: 40px;
+                    height: 30px;
+                    font-size: 18px;
+                    text-align: center;
+                    outline: none;
+                    border: none;
+
+                }
+            
+
+                #italic {
+                    width: 40px;
+                    height: 30px;
+                    font-size: 18px;
+                    outline: none;
+                    border: none;
+
+                    text-align: center;
+                }
+
+                #underline {
+                    outline: none;
+                    border: none;
+
+                    width: 40px;
+                    height: 30px;
+                    font-size: 18px;
+                    text-align: center;
+                    
+                }
+
+                .line{
+                    outline: none;
+                    border: none;
+
+                    width: 40px;
+                    height: 30px;
+                    font-size: 18px;
+                    text-align: center;
+                    border-right: 2px solid rgba(53, 54, 65, 0.986) !important;
+                }
+                #left{
+                    outline: none;
+                    border: none;
+                    
+                    width: 40px;
+                    height: 30px;
+                    font-size: 18px;
+                    text-align: center;
+                }
+                #center{
+                    outline: none;
+                    border: none;
+                    
+                    width: 40px;
+                    height: 30px;
+                    font-size: 18px;
+                    text-align: center;
+                }
+                .right{
+                    outline: none;
+                    border: none;
+
+                    width: 40px;
+                    height: 30px;
+                    font-size: 18px;
+                    text-align: center;
+                    border-right: 2px solid rgba(53, 54, 65, 0.986) !important;
+                }
+                #capital{
+                    outline: none;
+                    border: none;
+                    
+                    width: 40px;
+                    height: 30px;
+                    font-size: 18px;
+                    text-align: center;   
+                }
+            }
+        }
+        
+i{
+    padding: 4px;
+}
+        button{
+            margin-left: 10px;
+            transition: 0.5s all;
+            
+        }
+        button:active{
+        
+            color: blueviolet;
+        }
+        button:hover{
+        
+        background-color: aqua
+    }
+
+
+        textarea {
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            outline: none;
+            margin-top: 5px;
+            width: 100%;
+            height: 350px;
+            margin-top: 30px;
+            outline: none;
+            border: none;
+            padding: 30px;
+            font-size: 20px;
+        }
+
+        .bold {
+            font-weight: bolder;
+        
+        }  
+
+
+        .italic {
+            font-style: italic;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .linethrough {
+            text-decoration: line-through;
+        
+        }
+        .cap{
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="action">
+            <input type="number" id="size" min="1" max="100" value="16" onchange="num(this)">
+            <button class="tt" id="bold" onclick="bold()"><i class="fa-solid fa-bold" id="bold"></i></button>
+            <button id="italic"><i class="fa-solid fa-italic" id="italic"></i></button>
+            <button  id="underline"><i class="fa-solid fa-underline" id="underline"></i></button>
+            <button id="uperunderline" class="line"><i class="fa-solid fa-austral-sign" id="uperunderline"></i></button>
+            <button   id="left"><i class="fa-solid fa-align-left" id="left"></i></button>
+            <button  id="center"><i class="fa-solid fa-align-center" id="center"></i></button>
+            <button class="right"  id="right"><i class="fa-solid fa-align-right" id="right"></i></button>
+            <button  id="capital"><i class="fa-solid fa-a" id="capital"></i></button>
+        </div>
+        <!-- <input type="button" value="sup" id="sup">
+            <input type="button" value="sub" id="sub"> -->
+
+
+        <textarea name="write" id="area" placeholder="write any thing" onselect="myfunctrion()"></textarea>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
